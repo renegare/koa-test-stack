@@ -1,6 +1,6 @@
 {
   "name": "koa-test-stack",
-  "version": "0.0.0-2",
+  "version": "0.0.0-3",
   "description": "single interface wrapper around koa-compose and co, to test koa middleware(s)",
   "main": "index.js",
   "scripts": {
