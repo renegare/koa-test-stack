@@ -1,6 +1,10 @@
 language: node_js
 node_js:
   - "4"
+
+install:
+  - npm install -g npm
+
 after_success:
   - npm version prepatch
   - git push
