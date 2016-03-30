@@ -9,6 +9,5 @@ install:
 after_success: |
   if [ -n "$GITHUB_API_KEY" ]; then
     npm version prerelease
-    git push -f -q https://renegare:$GITHUB_API_KEY@github.com/renegare/koa-test-stack master &2>/dev/null
-    git push --tags -f -q https://renegare:$GITHUB_API_KEY@github.com/renegare/koa-test-stack master &2>/dev/null
+    git push --follow-tags -q https://renegare:$GITHUB_API_KEY@github.com/renegare/koa-test-stack master &2>/dev/null
   fi
