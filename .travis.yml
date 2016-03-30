@@ -3,7 +3,8 @@ node_js:
   - "4"
 
 install:
-  - npm install -g npm
+  - npm i -g npm
+  - npm i
 
 after_success: |
   if [ -n "$GITHUB_API_KEY" ]; then
