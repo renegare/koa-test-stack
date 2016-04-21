@@ -12,5 +12,24 @@ single interface wrapper around koa-compose and co, to test koa middleware(s)
 # Usage
 
 ```
-[TBC]
+import test from 'ava'
+import sinon from 'sinon'
+import {expect} from 'chai'
+import co from '.'
+
+test('should pass using an async func', async () => {
+  var ctx = {}
+  var stub = sinon.stub().returns('pong!')
+
+  await co(function * ping () {
+    this.body = stub()
+  }, ctx)
+
+  expect(ctx.body).to.equal('pong!')
+  expect(stub.calledOnce).to.be.true
+})
 ```
+
+For a less* futuristic way of testing ... see ```spec.js```
+
+\* using generator function to wrap your tests.
