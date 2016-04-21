@@ -4,9 +4,8 @@
   "description": "single interface wrapper around koa-compose and co, to test koa middleware(s)",
   "main": "index.js",
   "scripts": {
-    "test": "tap test/**/*.js",
-    "lint": "standard",
-    "dev": "nodemon `which npm` test"
+    "test": "ava spec.js",
+    "lint": "standard"
   },
   "repository": {
     "type": "git",
@@ -25,6 +24,7 @@
   },
   "homepage": "https://github.com/renegare/koa-test-stack#readme",
   "devDependencies": {
+    "ava": "^0.14.0",
     "bluebird": "^3.3.4",
     "chai": "^3.5.0",
     "nodemon": "^1.9.1",
